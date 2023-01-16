@@ -68,6 +68,10 @@ export class C客户端接口的控制类 {
   修修改与添加订单(@MessageBody() 数据: 订单类) {
     return this.服务功能.CF修改与添加订单(数据);
   }
+  @SubscribeMessage('创建订单')
+  创建订单(@MessageBody() 数据: 订单类) {
+    return this.服务功能.CF创建订单(数据);
+  }
   @SubscribeMessage('删除订单')
   删除订单(@MessageBody() 数据: 订单类) {
     return this.服务功能.CF删除订单(数据);
